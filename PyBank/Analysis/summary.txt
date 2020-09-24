@@ -1,0 +1,5 @@
+Total number of months are86
+Total profits are $38382578
+Average change each month is $7803.476744186047
+The largest monthly increase in profits totaled $ 1926159 which occured in Feb-2012
+The greatest monthly decrease in profits totaled $ -2196167 which occured in Sep-2013
