@@ -10,7 +10,10 @@ OTooley_Votes=0
 Khan_Votes=0
 Li_Votes=0
 Correy_Votes=0
-#   Khan_pct=0
+Khan_pct=0
+Otooley_pct=0
+Li_pct=0
+Correy_pct=0
 
 
 
@@ -35,17 +38,24 @@ with open(file_path) as csvfile:
 
         if New_Candidate == "O'Tooley":
             OTooley_Votes = OTooley_Votes + 1
+            Otooley_pct = round((OTooley_Votes / Total_Votes) * 100)
 
         if New_Candidate == "Khan":
             Khan_Votes = Khan_Votes + 1
+            Khan_pct = round((Khan_Votes / Total_Votes) * 100)
         
         if New_Candidate == "Li":
             Li_Votes = Li_Votes + 1
+            Li_pct = round((Li_Votes / Total_Votes) * 100)
+
 
         if New_Candidate == "Correy":
             Correy_Votes = Correy_Votes + 1
+            Correy_pct = round((Correy_Votes / Total_Votes) * 100)
 
     #   The percentage of votes each candidate won
+
+      
 
     print("***************************************************")
     print("Welcome to the Decision 2020 Headquarters")
@@ -57,13 +67,16 @@ with open(file_path) as csvfile:
     print("")
     print("The total number of votes cast for all candidates was:" + str(Total_Votes))
     print()
-    print("As predicted by the pollsters, Candidate Khan won the election by an historic margin!")
+    print("As predicted by the pollsters, Candidate Khan won the election by a historic margin!")
     print("")
-    print("Khan:" + str(Khan_Votes)) 
-    print("Correy:" + str(Correy_Votes))
-    print("Li:" + str(Li_Votes))
-    print("O'Tooley:" + str(OTooley_Votes))
-    print("Khan:" + str(Khan_pct))
+    print(f"Khan:{str(Khan_Votes)} {Khan_pct}%")
+    print(f"Correy:{str(Correy_Votes)} {Correy_pct}%")
+    print(f"Li:{str(Li_Votes)} {Li_pct}%")
+    print(f"O'Tooley:{str(OTooley_Votes)} {Otooley_pct}%")
+    print("")
+    print("Thank you for tuning into Decision 2020")
+
+   
 
 
 
